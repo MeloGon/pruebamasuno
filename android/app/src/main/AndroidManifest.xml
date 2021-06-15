@@ -3,7 +3,10 @@
 
   
 
+  
+
    <application
+        android:usesCleartextTraffic="true"
         android:label="pruebamasuno"
         android:icon="@mipmap/ic_launcher">
         <activity

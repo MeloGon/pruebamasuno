@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "522762783877",
+    "firebase_url": "https://masunoproof-default-rtdb.firebaseio.com",
     "project_id": "masunoproof",
     "storage_bucket": "masunoproof.appspot.com"
   },
@@ -13,6 +14,14 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "522762783877-b9tud2mfgh9iftdo43bfes9rc1h21amd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kevyn.pruebamasuno",
+            "certificate_hash": "0dfe677af4ed3cc4161a44d3b1028f4cd60daca4"
+          }
+        },
         {
           "client_id": "522762783877-vclq9gnis041kejio8t3isghs1iahkgl.apps.googleusercontent.com",
           "client_type": 3

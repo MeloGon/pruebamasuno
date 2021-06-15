@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:pruebamasuno/src/constants/utilites.dart';
+import 'package:pruebamasuno/src/widgets/widgets.dart';
 
 class Profile extends StatelessWidget {
   const Profile({Key key}) : super(key: key);
@@ -14,40 +17,74 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
+                style: inputStyle,
                 decoration: InputDecoration(hintText: "Nombre"),
               ),
-              SizedBox(
-                height: 40,
-              ),
+              spaceSized(40),
               TextFormField(
+                style: inputStyle,
                 decoration: InputDecoration(hintText: "Apellidos"),
               ),
-              SizedBox(
-                height: 40,
-              ),
+              spaceSized(40),
               TextFormField(
+                style: inputStyle,
                 decoration: InputDecoration(hintText: "Email"),
               ),
-              Container(
-                  width: Get.width * .5,
-                  height: Get.height * .3,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/images/man.jpg'),
-                  )),
-              ElevatedButton(
-                child: Text("Update"),
-                onPressed: () {
-                  /*loginCtrl.login(
-                        emailController.text, passwordController.text);*/
-                },
+              spaceSized(20),
+              Stack(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Colors.grey[200],
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: Icon(
+                          CupertinoIcons.camera_on_rectangle,
+                          color: primaryColor,
+                        )),
+                  ),
+                  Container(
+                      width: Get.width * .5,
+                      height: Get.height * .3,
+                      child: CircleAvatar(
+                        backgroundImage: AssetImage('assets/images/man.jpg'),
+                      )),
+                ],
               ),
-              ElevatedButton(
-                child: Text("Sign Out"),
-                onPressed: () {
-                  Get.toNamed('login');
-                  /*loginCtrl.login(
-                        emailController.text, passwordController.text);*/
-                },
+              Container(
+                width: Get.width,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: primaryColor,
+                  ),
+                  child: Text(
+                    "Update",
+                    style: buttonStyle,
+                  ),
+                  onPressed: () {
+                    /*loginCtrl.login(
+                          emailController.text, passwordController.text);*/
+                  },
+                ),
+              ),
+              spaceSized(10),
+              Container(
+                width: Get.width,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    primary: primaryColor,
+                  ),
+                  child: Text(
+                    "Sign Out",
+                    style: buttonStyle,
+                  ),
+                  onPressed: () {
+                    Get.toNamed('login');
+                    /*loginCtrl.login(
+                          emailController.text, passwordController.text);*/
+                  },
+                ),
               ),
             ],
           ),

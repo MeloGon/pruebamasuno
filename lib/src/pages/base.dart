@@ -16,7 +16,10 @@ class Base extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: primaryColor,
-          title: Text('Movies'),
+          title: Text(
+            'Movies',
+            style: TextStyle(fontFamily: 'SemiBold'),
+          ),
           actions: [
             //utilizo este widget para poder cambiar el tema de la app
             Switch(
@@ -36,7 +39,7 @@ class Base extends StatelessWidget {
               label: 'Movies',
             ),
             BottomNavigationBarItem(
-              icon: Icon(CupertinoIcons.profile_circled),
+              icon: Icon(CupertinoIcons.person),
               label: 'Profile',
             ),
           ],
