@@ -119,7 +119,8 @@ class Login extends StatelessWidget {
       children: [
         GoogleAuthButton(
           onPressed: () async {
-            await socialServices.signInWithGoogle();
+            var resp = await socialServices.signInWithGoogle();
+            print('credenciales' + resp.toString());
             Get.toNamed('base');
           },
           style: AuthButtonStyle(

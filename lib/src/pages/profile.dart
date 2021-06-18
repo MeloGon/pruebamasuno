@@ -2,10 +2,45 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:pruebamasuno/src/constants/utilites.dart';
+import 'package:pruebamasuno/src/controllers/profile_controller.dart';
 import 'package:pruebamasuno/src/widgets/widgets.dart';
 
-class Profile extends StatelessWidget {
-  const Profile({Key key}) : super(key: key);
+class Profile extends StatefulWidget {
+  @override
+  _ProfileState createState() => _ProfileState();
+}
+
+class _ProfileState extends State<Profile> {
+  final TextEditingController nameController = TextEditingController();
+
+  final TextEditingController lastnameController = TextEditingController();
+
+  final TextEditingController emailController = TextEditingController();
+
+  final profileCtrl = Get.put(ProfileController());
+
+  loadData() async {
+    var resp = await profileCtrl.getDataUser();
+    if (resp != null) {
+      nameController.text = resp['name'].toString() ?? '';
+      lastnameController.text = resp['lastname'].toString() ?? '';
+      emailController.text = resp['email'].toString() ?? '';
+    }
+  }
+
+  @override
+  void initState() {
+    loadData();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    lastnameController.dispose();
+    emailController.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,16 +52,19 @@ class Profile extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               TextFormField(
+                controller: nameController,
                 style: inputStyle,
                 decoration: InputDecoration(hintText: "Nombre"),
               ),
               spaceSized(40),
               TextFormField(
+                controller: lastnameController,
                 style: inputStyle,
                 decoration: InputDecoration(hintText: "Apellidos"),
               ),
               spaceSized(40),
               TextFormField(
+                controller: emailController,
                 style: inputStyle,
                 decoration: InputDecoration(hintText: "Email"),
               ),
@@ -62,6 +100,8 @@ class Profile extends StatelessWidget {
                     style: buttonStyle,
                   ),
                   onPressed: () {
+                    profileCtrl.writeUserData(nameController.text,
+                        lastnameController.text, emailController.text);
                     /*loginCtrl.login(
                           emailController.text, passwordController.text);*/
                   },
