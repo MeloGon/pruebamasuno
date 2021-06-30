@@ -1,6 +1,6 @@
 # pruebamasuno
 
-A new Flutter project.
+Una aplicacion simple consumiendo la api Traktv y integracion con Firebase usando Getx
 
 ## Getting Started
 
@@ -10,6 +10,7 @@ Para poder usar el login con redes sociales es necesario descargar el siguiente 
 ya que contiene algunas keys necesarias.
     https://drive.google.com/drive/u/1/folders/1ti0VytVmas4U3l7e4hb_-MI1aFbZFK7w
 
+Tambien se puede pasar el login colocando cualquier correo y cualquier contrasena
 
 
 A few resources to get you started if this is your first Flutter project:
