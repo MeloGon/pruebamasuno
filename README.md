@@ -12,10 +12,11 @@ ya que contiene algunas keys necesarias.
 
 Tambien se puede pasar el login colocando cualquier correo y cualquier contrasena
 
-![Screenshot_1625023325](https://user-images.githubusercontent.com/40903405/123897320-cf9ca180-d928-11eb-8fc1-b3c1b68f3177.png)
-![Screenshot_1625023391](https://user-images.githubusercontent.com/40903405/123897329-d2979200-d928-11eb-9103-0a0ff468556f.png)
-![Screenshot_1625023397](https://user-images.githubusercontent.com/40903405/123897331-d3302880-d928-11eb-9ad5-a70ffa5f216f.png)
-![Screenshot_1625023414](https://user-images.githubusercontent.com/40903405/123897335-d4615580-d928-11eb-9740-aa3a2d167706.png)
+<img src="https://user-images.githubusercontent.com/40903405/123897320-cf9ca180-d928-11eb-8fc1-b3c1b68f3177.png" width="25%" height="25%"> |
+<img src="https://user-images.githubusercontent.com/40903405/123897329-d2979200-d928-11eb-9103-0a0ff468556f.png" width="25%" height="25%"> |
+<img src="https://user-images.githubusercontent.com/40903405/123897331-d3302880-d928-11eb-9ad5-a70ffa5f216f.png" width="25%" height="25%"> |
+<img src="https://user-images.githubusercontent.com/40903405/123897335-d4615580-d928-11eb-9740-aa3a2d167706.png" width="25%" height="25%"> 
+
 
 
 
